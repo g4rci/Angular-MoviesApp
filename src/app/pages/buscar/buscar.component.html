@@ -1,0 +1,8 @@
+<h1>Buscar películas: <small class="text-capitalize">{{ texto }}</small></h1>
+<hr>
+
+
+<app-peliculas-poster-grid 
+    *ngIf="movies.length > 0"
+    [movies]="movies">
+</app-peliculas-poster-grid>
