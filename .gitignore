@@ -2,8 +2,8 @@
 
 # Angular Enviroment variables
 
-enviroment.pord.ts
-enviroment.ts
+environment.pord.ts
+environment.ts
 
 # compiled output
 /dist
