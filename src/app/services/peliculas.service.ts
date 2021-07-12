@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { tap, map, catchError } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 import { CarteleraResponse, Movie } from '../interfaces/cartelera-response';
 import { Cast, CreditsResponse } from '../interfaces/credits-response';
 import { MovieResponse } from '../interfaces/Movie-response';
@@ -18,10 +19,9 @@ export class PeliculasService {
   
   constructor( private http: HttpClient ) {  };
 
-
   get params() {
     return {
-      api_key: 'fab095e2e128229267dcab57b84df46f',
+      api_key: `${environment.apiKey}`,
       language: 'es-ES',
       page: this.carteleraPage
     }
